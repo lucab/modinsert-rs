@@ -1,0 +1,16 @@
+[package]
+name = "modinsert"
+version = "0.1.0"
+authors = ["Luca Bruno <lucab@debian.org>"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/lucab/modinsert-rs"
+documentation = "https://docs.rs/modinsert"
+description = "A dirty module-loading library for the Linux kernel"
+keywords = ["Linux", "module", "modprobe", "namespace"]
+exclude = [
+".gitignore",
+".travis.yml",
+]
+
+[dependencies]
+nix = "0.9"
