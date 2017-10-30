@@ -35,15 +35,15 @@ See `modprobe(7)` for more documentation on kernel modules.
 
 ```rust
 //! Run this, then check `dmesg` for the effects.
-//! It works also in containers, as long as the caller has `CAP_SYS_MODULE`.
+//! It works in containers too, as long as the process has `CAP_SYS_MODULE`.
 
 extern crate modinsert;
 
 use std::ffi::CString;
 
 fn main() {
-    let modname = CString::new("rbd");
-    modinsert::try_load(&modname));
+    let modname = CString::new("rbd").unwrap();
+    modinsert::try_load(&modname);
 }
 ```
 
